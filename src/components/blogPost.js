@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class BlogList extends Component {
     state = {
@@ -26,6 +27,7 @@ class BlogList extends Component {
             <div>
                 <h1>{post.title}</h1>
                 <p>{post.content}</p>
+                <Link to={`/edit/post${post.id}`}>Edit</Link>
             </div>
         )
     }
